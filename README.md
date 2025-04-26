@@ -1,0 +1,3 @@
+Aplicacion de procesamiento de imagenes usando JavaScript. Permite un canvas de dibujo, estilo pixel-art inspirado el juego etch a sketch. 
+Permite al usuario subir sus imagenes para adaptarlas al canvas y general pixel-art personalizados, posteriormente descargar el resultado. 
+Asi mismo, puede subir sus imagenes para covertirlas en Ascii-Art en varios estilos y cantidad de caracteres, posteriormente copiar o descargar el texto resultante. 
