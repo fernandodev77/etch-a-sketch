@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch A Sketch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Etch A Sketch</h1>
+    <div class="tabs">
+        <button class="tab-button active" data-tab="pixel">Pixel Art</button>
+        <button class="tab-button" data-tab="ascii">ASCII Art</button>
+    </div>
+    <div class="tab-content" id="pixel" style="display:block;">
+        <div class="controls">
+            <label>
+                <input type="checkbox" id="colorMode"> Modo colores random
+            </label>
+            <input type="color" id="colorPicker" value="#000000">
+            <button id="clearGrid">Limpiar</button>
+            <button id="resizeGrid">Cambiar Tamaño</button>
+        </div>
+        <div class="container">
+            <div id="grid"></div>
+        </div>
+        <div class="upload-container">
+            <input type="file" id="imageUpload" accept="image/*">
+        </div>
+        <div class="save-container">
+            <button id="saveCanvas">Guardar Imagen</button>
+            <select id="formatSelect">
+                <option value="png">PNG</option>
+                <option value="jpeg">JPEG</option>
+                <option value="webp">WEBP</option>
+            </select>
+        </div>
+    </div>
+    <div class="tab-content" id="ascii" style="display:none;">
+        <div class="upload-container">
+            <input type="file" id="asciiImageUpload" accept="image/*">
+        </div>
+        <div class="ascii-controls">
+            <label for="asciiStyle">Estilo:</label>
+            <select id="asciiStyle">
+                <option value="standard">Estándar</option>
+                <option value="dense">Denso</option>
+                <option value="simple">Simple</option>
+                <option value="cruz">Cruz</option>
+                <option value="cuadrados">Cuadrados</option>
+                <option value="asterisco">Asterisco</option>
+            </select>
+            <label for="asciiCharCount" style="margin-left:15px;">Nº caracteres:</label>
+            <input type="range" id="asciiCharCount" min="30" max="200" value="80" step="1" style="width:120px;">
+            <span id="asciiCharCountValue">80</span>
+            <label style="margin-left:15px;display:flex;align-items:center;gap:8px;"><input type="checkbox" id="asciiContrastSwitch"> Modo contraste (fondo negro + invertir caracteres)</label>
+            <button id="copyAscii">Copiar ASCII</button>
+        </div>
+        <textarea id="asciiOutput"></textarea>
+        <div class="ascii-save-container">
+            <button id="saveAsciiTxt">Guardar (.txt)</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
